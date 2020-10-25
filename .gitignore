@@ -4,3 +4,4 @@ package.lock
 *.log
 
 dist/
+.DS_Store
