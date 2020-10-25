@@ -1,0 +1,33 @@
+{
+  "name": "radiosavta-player",
+  "version": "1.0.0",
+  "description": "Radiosavta player widget",
+  "main": "dist/radiosavtaPlayer.js",
+  "module": "dist/radiosavtaPlayer.js",
+  "repository": "https://github.com/marik22312/radiosavta-player",
+  "author": "Marik Shnitman",
+  "license": "MIT",
+  "private": false,
+  "files": [
+	  "./dist/*"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "awesome-typescript-loader": "^5.2.1",
+    "html-webpack-plugin": "^5.0.0-alpha.6",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "typescript": "^4.0.3",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
