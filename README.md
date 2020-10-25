@@ -4,20 +4,24 @@ Foobar is a Python library for dealing with word pluralization.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Using NPM
 
 ```bash
-pip install foobar
+npm install --save radiosavta-player
+```
+Using Yarn
+```bash
+yarn add radiosavta-player
 ```
 
 ## Usage
 
-```python
-import foobar
+```typescript
+import RadiosavtaPlayer, { RadiosavtaPlayerProps } from 'radiosavta-player'
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+export const Player: React.FC<RadiosavtaPlayerProps> = (props) => {
+	return (<RadiosavtaPlayer {...props} />);
+}
 ```
 
 ## Contributing
