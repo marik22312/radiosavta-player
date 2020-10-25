@@ -1,4 +1,6 @@
-# Foobar
+# Radiosavta Player
+
+> TODO: Add image
 
 Foobar is a Python library for dealing with word pluralization.
 
