@@ -5,7 +5,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-	  radiosavtaPlayer: './src/index.tsx'
+	  radiosavtaPlayer: './src/index.ts'
   },
   module: {
     rules: [
@@ -18,6 +18,9 @@ module.exports = {
   },
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
+  },
+  externals: {
+	  React: "React"
   },
   output: {
     filename: 'radiosavtaPlayer.js',
