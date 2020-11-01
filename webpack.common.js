@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -24,7 +23,15 @@ module.exports = {
           // Compiles Sass to CSS
           'sass-loader',
         ],
-      }
+	  },
+	  {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   resolve: {
@@ -39,20 +46,7 @@ module.exports = {
 	library: "RadiosavtaPlayer",
 	libraryTarget: "umd",
   },
-  plugins: [new HtmlWebpackPlugin({
-	  title: "Radiosavta Player tester",
-	  minify: false,
-	  templateContent: `<html><body><div id="Radio-savta"></div></body></html>`
-	  
-  }),
+  plugins: [
 	 new Dotenv()
-],
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-	port: 3000,
-	open: true,
-	injectClient: false
-  },
-  devtool: 'eval-source-map'
+]
 };

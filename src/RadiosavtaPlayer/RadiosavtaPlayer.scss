@@ -1,0 +1,15 @@
+#radiosavta-player-container {
+	display: inline-flex;
+	flex-direction: row;
+	max-height: 400px;
+
+	background-color: #155c00;
+	padding-right: 15px;
+}
+
+.radiosavta-player-image {
+	margin-right: 15px;
+	img {
+		max-height: 100px;
+	}
+}

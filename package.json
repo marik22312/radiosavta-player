@@ -3,17 +3,19 @@
 	"version": "1.0.0",
 	"description": "Radiosavta player widget",
 	"main": "dist/radiosavtaPlayer.js",
+	"types": "dist/src/index.d.ts",
 	"module": "dist/radiosavtaPlayer.js",
 	"repository": "https://github.com/marik22312/radiosavta-player",
 	"author": "Marik Shnitman",
 	"license": "MIT",
 	"private": false,
 	"files": [
-		"./dist/*"
+		"dist/*"
 	],
 	"scripts": {
-		"build": "webpack",
-		"start": "webpack serve"
+		"build": "webpack --config webpack.prod.js",
+		"start": "webpack serve --config webpack.dev.js",
+		"prepublish": "yarn build"
 	},
 	"devDependencies": {
 		"@types/react": "^16.9.53",
@@ -30,6 +32,7 @@
 		"eslint-plugin-react": "^7.21.5",
 		"eslint-plugin-react-app": "^6.2.2",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"file-loader": "^6.2.0",
 		"html-webpack-plugin": "^5.0.0-alpha.6",
 		"prettier": "^2.1.2",
 		"sass": "^1.28.0",
@@ -38,12 +41,14 @@
 		"typescript": "^4.0.3",
 		"webpack": "^5.2.0",
 		"webpack-cli": "^4.1.0",
-		"webpack-dev-server": "^3.11.0"
+		"webpack-dev-server": "^3.11.0",
+		"webpack-merge": "^5.3.0"
 	},
 	"dependencies": {
 		"@types/react-sound": "^1.2.2",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
+		"react-query": "^2.25.2",
 		"react-sound": "^1.2.0",
 		"sass-loader": "^10.0.4"
 	}
